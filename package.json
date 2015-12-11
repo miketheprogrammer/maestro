@@ -1,0 +1,19 @@
+{
+  "name": "maestro",
+  "version": "1.0.0",
+  "description": "Description ---------------------- Maestro is a docker orchestration tool built on top of NodeJS. It is designed to make scaling docker containers easy. All you need is a running consul deployment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miketheprogrammer/maestro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miketheprogrammer/maestro/issues"
+  },
+  "homepage": "https://github.com/miketheprogrammer/maestro#readme"
+}
