@@ -7,3 +7,5 @@ RUN apk add --update bash
 RUN npm install -g pm2
 ADD . /opt/maestro
 WORKDIR /opt/maestro
+RUN npm install
+CMD pm2 start index.js -i 2 --name=maestro-cluster && pm2 logs
