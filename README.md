@@ -14,6 +14,21 @@ Uses docker daemon, so no hidden crazyness.
 Uses labels to determine containers it is manageing
 Plugin Architecture
 
+Limitations
+----------------------
+Deployments are not seperate from apps. 
+
+Unless you use an external deployment method, like git auto pull the docker image will not automatically update.
+
+You can create a new app for deploys, and then scale down the old app as an alternative.
+
+Also, new nodes added to the system may pull down a later version of the image then old nodes.
+
+For this case we recommend always using tagging, and always only pushing to foreign when you are ready to do a deployment.
+
+I plan to fix some of these issues by using a deployments object.
+
+
 
 Plugins ( todo )
 ---------------------
