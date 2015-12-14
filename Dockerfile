@@ -4,9 +4,9 @@ RUN apk add --update openssh
 RUN apk add --update git
 RUN rm -rf /var/cache/apk/*
 RUN apk add --update bash
-#RUN npm install -g pm2
+RUN npm install -g pm2
 ADD . /opt/maestro
 WORKDIR /opt/maestro
 RUN npm install
-#CMD pm2 start index.js -i 2 --name=maestro-cluster && pm2 logs
-CMD node index.js
+CMD pm2 start index.js -i 2 --name=maestro-cluster && while true; do echo "running"; sleep 2; done
+#CMD node index.js

@@ -47,8 +47,8 @@ app.post('/application', function (req, res) {
   if ('string' !== typeof req.body.image) return res.api(new Error('image must be a string'))
   if ('string' !== typeof req.body.command) return res.api(new Error('command must be a string'))
 
-  manager.upsertApplication(req.body, function (err, application) {
-    res.api(err, application);
+  manager.upsertApplication(req.body, function (err, response) {
+    res.api(err, response);
   })
 });
 
